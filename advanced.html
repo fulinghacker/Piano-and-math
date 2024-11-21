@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music and math circle</title>
+    <link rel="stylesheet" href="advanced.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="index.html"><b>Home</b></a></li>
+                <li><a href="basic.html"><b>Basic course</b></a></li>
+                <li><a href="intermediate.html"><b>Intermediate course</b></a></li>
+                <li><a href="advanced.html"><b>Advanced course</b></a></li> 
+                <li><a href="practice.html"><b>Explore more</b></a></li>
+            </ul>
+        </nav>
+        </div>
+    <div class="circle">
+        <div class="plat">
+            <div class="outer">
+                <div class="inner2">
+                    <div class="inner"></div>
+                </div>
+            </div>
+            <div class="section" style="transform: skewY(-60deg);">
+                <div class="keys" id="C"><div class="letter">C</div></div>
+                <div class="minor"><div class="minorl"><small>Am</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(30deg) skewY(-60deg);">
+                <div class="keys" id="G"><div class="letter">G</div></div>
+                <div class="minor"><div class="minorl"><small>Em</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(60deg) skewY(-60deg);">
+                <div class="keys" id="D"><div class="letter">D</div></div>
+                <div class="minor"><div class="minorl"><small>Bm</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(90deg) skewY(-60deg);">
+                <div class="keys" id="A"><div class="letter">A</div></div>
+                <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>F<sup>#</sup>m</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(120deg) skewY(-60deg);">
+                <div class="keys" id="E"><div class="letter">E</div></div>
+                <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>C<sup>#</sup>m</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(150deg) skewY(-60deg);">
+                <div class="keys" id="B"><div class="letter">B</div></div>
+                <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>G<sup>#</sup>m</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(180deg) skewY(-60deg);">
+                <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">G<small><sup>b</sup></small></div></div>
+                <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>D<sup>#</sup>m</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(210deg) skewY(-60deg);">
+                <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">D<small><sup>b</sup></small></div></div>
+                <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>B<sup>b</sup>m</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(240deg) skewY(-60deg);">
+                <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">A<small><sup>b</sup></small></div></div>
+                <div class="minor"><div class="minorl"><small>Fm</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(270deg) skewY(-60deg);">
+                <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">E<small><sup>b</sup></small></div></div>
+                <div class="minor"><div class="minorl"><small>Cm</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(300deg) skewY(-60deg);">
+                <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">B<small><sup>b</sup></small></div></div>
+                <div class="minor"><div class="minorl"><small>Gm</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(330deg) skewY(-60deg);">
+                <div class="keys"><div class="letter">F</div></div>
+                <div class="minor"><div class="minorl"><small>Dm</small></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="title"><div id="welcome"><small><small><small>Welcome to</small></small></small></div><div id="courseT">ADVANCED COURSE</div></div>
+    <div class="spacer" id="header"></div>
+    <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+    </div>
+    </header>
+
+    <main>
+        <br>
+        <br>
+        <br><br><br>
+        <hr>
+        <div class="tablecontent">
+            <div class="subtitle" id="TC"><b>Table of content</b></div>
+            <div class="TClist">
+                <ul>
+                    <a href="#perpendicular"><li>Perpendicular bisector</li></a>
+                    <a href="#tangent"><li>Tangent</li></a>
+                    <a href="#Fcenter"><li>Find the Center of circle</li></a>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <br><br>
+
+        <div id="perpendicular">
+            <div class="subtitle" style="color: #654321;"><big>Perpendicular bisector</big></div>
+            <div class="textPer"><p><b><big><span style="color: #b22222;">Perpendicular bisector</span></big></b> is just as its name implies, which is defined as <b><span style="color: #7f6000;">a line that intersects a <a href="basic.html#chordarc">chord</a> at the middle of the chord and is perpendicular to it</span></b>, with all angles at the intersection being <span style="color: red;"><big>90</big></span> degrees.</p></div>
+            <div class="textPer"><p>The song <big><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">"Never Gonna Give You Up"</a></big> uses the famous royal road progression, and its chord progression is CGAMF. So here I will use the chord between F and G as an example of the perpendicular bisector. The following is the specific implementation process.</p></div>
+            <br><br><div class="textPer" id="exp"><p><big><big><b><span style="color: #846508;">Hover the following blocks so you can see the steps</span></b></big></big></p></div>
+            <div class="circlePer">
+                <div class="platPer">
+                    <div class="outerPer">
+                        <div class="outerspace"></div>
+                        <div class="innerPer"></div>
+                        <div class="inner2Per"></div>
+                        <div class="innerspace"></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerC" style="transform: skewY(-60deg);">
+                        <div class="keys" id="C"><div class="letter">C</div></div>
+                        <div class="minor"><div class="minorl"><small>Am</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerG" style="transform: rotate(30deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter">G</div></div>
+                        <div class="minor"><div class="minorl"><small>Em</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerD" style="transform: rotate(60deg) skewY(-60deg);">
+                        <div class="keys" id="D"><div class="letter">D</div></div>
+                        <div class="minor"><div class="minorl"><small>Bm</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerA" style="transform: rotate(90deg) skewY(-60deg);">
+                        <div class="keys" id="A"><div class="letter">A</div></div>
+                        <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>F<sup>#</sup>m</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerE" style="transform: rotate(120deg) skewY(-60deg);">
+                        <div class="keys" id="E"><div class="letter">E</div></div>
+                        <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>C<sup>#</sup>m</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerB" style="transform: rotate(150deg) skewY(-60deg);">
+                        <div class="keys" id="B"><div class="letter">B</div></div>
+                        <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>G<sup>#</sup>m</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerGb" style="transform: rotate(180deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">G<small><sup>b</sup></small></div></div>
+                        <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>D<sup>#</sup>m</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerDb" style="transform: rotate(210deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">D<small><sup>b</sup></small></div></div>
+                        <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>B<sup>b</sup>m</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerAb" style="transform: rotate(240deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">A<small><sup>b</sup></small></div></div>
+                        <div class="minor"><div class="minorl"><small>Fm</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerEb" style="transform: rotate(270deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">E<small><sup>b</sup></small></div></div>
+                        <div class="minor"><div class="minorl"><small>Cm</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerBb" style="transform: rotate(300deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">B<small><sup>b</sup></small></div></div>
+                        <div class="minor"><div class="minorl"><small>Gm</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerF" style="transform: rotate(330deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter">F</div></div>
+                        <div class="minor"><div class="minorl"><small>Dm</small></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="steps" id="step1">Step 1: Draw the chord between G and F, which is chord GF</div>
+                <div class="steps" id="step2">Step 2: Find the middle point of the chord</div>
+                <div class="steps" id="step3">Step 3: Draw a line that is perpendicular to the chord. The line that you draw is the perpendicular bisector of the chord GF</div>
+                <div class="chordFG"></div>
+                <div class="midP">
+                    <div class="lines" id="s1"><div class="line" id="l1"></div><div class="line" id="l2"></div></div>
+                    <div class="lines" id="s2"><div class="line" id="l3"></div><div class="line" id="l4"></div></div>
+                </div>
+                <div class="bisector">
+                    <div class="anglePer"></div>
+                    <div class="numPer">90</div>
+                </div>
+            </div>
+        </div><br><br>
+        <hr class="art"><br><br>
+
+        <div id="tangent">
+            <div class="subtitle" style="color: #654321;"><big>Tangent</big></div>
+            <div class="textTag"><p><big><b><span style="color: #b22222;">Tangent</span></b></big> is <b><span style="color: #7f6000;">a line that intersects a circle at only one point.</span></b> The radius or diameter from this point is always <span style="color: red;"><big>90</big></span> degrees to this line. The point where the line intersects the circle is called the point of tangency.</p></div>
+            <div class="textTag"><p>I picked the song “canon in d” so I am just going to use the D major as the point of tangency to do an example. The following are the specific steps. However, the second and third steps are interchangeable. You can choose to draw the line first or find the point of tangecy first, depending on your habits and specific circumstances.</p></div>
+            <div class="textPer" id="exp"><p><big><big><b><span style="color: #846508;">Hover the following blocks so you can see the steps</span></b></big></big></p></div>
+            <br><br>
+            <div class="containerTag">
+                <div class="stepsTag" id="stepTag1"><div class="border">Step 1: To make it easier to see and draw, let's just rotate the circle of fifth and let the D major on the bottom</div></div>
+                <div class="stepsTag" id="stepTag2"><div class="border">Step 2: Find the point of tangency, which is D major</div></div>
+                <div class="stepsTag" id="stepTag3"><div class="border">Step 3: Draw a line that is intersects the D major</div></div>
+                <div class="stepsTag" id="stepTag4"><div class="border">Step 4: Draw a diameter that is perpendicular to the line. Now this is the example of tangent, the angle will be 90 degrees.</div></div>
+                <div class="circleTag">
+                    <div class="platTag">
+                        <div class="outerPer">
+                            <div class="outerspace"></div>
+                            <div class="innerPer"></div>
+                            <div class="inner2Per"></div>
+                            <div class="innerspace"></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerC" style="transform: skewY(-60deg);">
+                            <div class="keys" id="C"><div class="letter">C</div></div>
+                            <div class="minor"><div class="minorl"><small>Am</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerG" style="transform: rotate(30deg) skewY(-60deg);">
+                            <div class="keys"><div class="letter">G</div></div>
+                            <div class="minor"><div class="minorl"><small>Em</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerD" style="transform: rotate(60deg) skewY(-60deg);">
+                            <div class="keys" id="D"><div class="letter">D</div></div>
+                            <div class="minor"><div class="minorl"><small>Bm</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerA" style="transform: rotate(90deg) skewY(-60deg);">
+                            <div class="keys" id="A"><div class="letter">A</div></div>
+                            <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>F<sup>#</sup>m</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerE" style="transform: rotate(120deg) skewY(-60deg);">
+                            <div class="keys" id="E"><div class="letter">E</div></div>
+                            <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>C<sup>#</sup>m</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerB" style="transform: rotate(150deg) skewY(-60deg);">
+                            <div class="keys" id="B"><div class="letter">B</div></div>
+                            <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>G<sup>#</sup>m</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerGb" style="transform: rotate(180deg) skewY(-60deg);">
+                            <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">G<small><sup>b</sup></small></div></div>
+                            <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>D<sup>#</sup>m</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerDb" style="transform: rotate(210deg) skewY(-60deg);">
+                            <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">D<small><sup>b</sup></small></div></div>
+                            <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>B<sup>b</sup>m</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerAb" style="transform: rotate(240deg) skewY(-60deg);">
+                            <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">A<small><sup>b</sup></small></div></div>
+                            <div class="minor"><div class="minorl"><small>Fm</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerEb" style="transform: rotate(270deg) skewY(-60deg);">
+                            <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">E<small><sup>b</sup></small></div></div>
+                            <div class="minor"><div class="minorl"><small>Cm</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerBb" style="transform: rotate(300deg) skewY(-60deg);">
+                            <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">B<small><sup>b</sup></small></div></div>
+                            <div class="minor"><div class="minorl"><small>Gm</small></div></div>
+                        </div>
+                        <div class="sectionPer" id="sectionPerF" style="transform: rotate(330deg) skewY(-60deg);">
+                            <div class="keys"><div class="letter">F</div></div>
+                            <div class="minor"><div class="minorl"><small>Dm</small></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tangentcon" id="tagency"><div class="tagencytext">The point of tangecy</div></div>
+                <div class="tangentcon" id="outline"></div>
+                <div class="tangentcon" id="diaTag"><div class="angle"></div><div class="num">90</div></div>
+            </div>
+        </div><br><br><br><br>
+        <hr class="art"><br><br>
+        </div>
+
+        <div id="Fcenter">
+            <div class="subtitle" style="color: #654321;"><big>Find the Center of circle</big></div>
+            <div class="textFC"><p>Next, I want to teach you how to find the center of a circle. When I just mentioned perpendicular bisectors and tangents above, you may have noticed that both of these lines pass through the center of the circle, so we can use this feature to find the center of a circle. The specific operation is as follows.</p></div>
+            <div class="textFC" id="exp"><p><big><big><b><span style="color: #846508;">Hover the following blocks so you can see the steps</span></b></big></big></p></div><br><br>
+            <div class="circleFC">
+                <div class="platFC">
+                    <div class="outerPer">
+                        <div class="outerspace"></div>
+                        <div class="innerPer"></div>
+                        <div class="inner2Per"></div>
+                        <div class="innerspace"></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerC" style="transform: skewY(-60deg);">
+                        <div class="keys" id="C"><div class="letter">C</div></div>
+                        <div class="minor"><div class="minorl"><small>Am</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerG" style="transform: rotate(30deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter">G</div></div>
+                        <div class="minor"><div class="minorl"><small>Em</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerD" style="transform: rotate(60deg) skewY(-60deg);">
+                        <div class="keys" id="D"><div class="letter">D</div></div>
+                        <div class="minor"><div class="minorl"><small>Bm</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerA" style="transform: rotate(90deg) skewY(-60deg);">
+                        <div class="keys" id="A"><div class="letter">A</div></div>
+                        <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>F<sup>#</sup>m</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerE" style="transform: rotate(120deg) skewY(-60deg);">
+                        <div class="keys" id="E"><div class="letter">E</div></div>
+                        <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>C<sup>#</sup>m</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerB" style="transform: rotate(150deg) skewY(-60deg);">
+                        <div class="keys" id="B"><div class="letter">B</div></div>
+                        <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>G<sup>#</sup>m</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerGb" style="transform: rotate(180deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">G<small><sup>b</sup></small></div></div>
+                        <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>D<sup>#</sup>m</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerDb" style="transform: rotate(210deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">D<small><sup>b</sup></small></div></div>
+                        <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>B<sup>b</sup>m</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerAb" style="transform: rotate(240deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">A<small><sup>b</sup></small></div></div>
+                        <div class="minor"><div class="minorl"><small>Fm</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerEb" style="transform: rotate(270deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">E<small><sup>b</sup></small></div></div>
+                        <div class="minor"><div class="minorl"><small>Cm</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerBb" style="transform: rotate(300deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">B<small><sup>b</sup></small></div></div>
+                        <div class="minor"><div class="minorl"><small>Gm</small></div></div>
+                    </div>
+                    <div class="sectionPer" id="sectionPerF" style="transform: rotate(330deg) skewY(-60deg);">
+                        <div class="keys"><div class="letter">F</div></div>
+                        <div class="minor"><div class="minorl"><small>Dm</small></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerFC">
+                <div class="stepsFC" id="stepFC1"><div class="border">Step 1: Draw two random chord in the circle</div></div>
+                <div class="stepsFC" id="stepFC2"><div class="border">Step 2: Draw the perpendicular bisectors of each circle</div></div>
+                <div class="stepsFC" id="stepFC3"><div class="border">Step 3: The point that they interect is the center of circle</div></div>
+                <div class="chords">
+                    <div class="Chord1"></div>
+                    <div class="Chord2"></div>
+                </div>
+                <div class="PerB">
+                    <div class="PerB1">
+                        <div class="midPFC"></div>
+                        <div class="lines" id="s1"><div class="line" id="FCl1"></div><div class="line" id="FCl2"></div></div>
+                        <div class="lines" id="s2"><div class="line" id="FCl3"></div><div class="line" id="FCl4"></div></div>
+                    </div>
+                    <div class="PerB2">
+                        <div class="midPB2"></div>
+                        <div class="lines" id="s1"><div class="lineB2" id="B2l1"></div><div class="lineB2" id="B2l2"></div></div>
+                        <div class="lines" id="s2"><div class="lineB2" id="B2l3"></div><div class="lineB2s" id="B2l4"></div></div>
+                    </div>
+                </div>
+                <div class="Center"><div id="O">O</div></div>
+            </div>
+        </div>
+        <hr class="art"><br><br><br><br><br>
+
+        <div class="finish">
+            <a href="advanced.html">
+                <div class="backB" id="containerback">
+                <div class="up">^</div><br>
+                    <div class="back"><b>Go back to the top</b></div>
+                </div>
+            </a>
+            <br><div id="or"><b>OR</b></div><br>
+            <a href="practice.html"><div class="more"><b>Learn more?→</b></div></a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="titleF">About</div>
+            <div class="Ftext">Author: Hacker</div>
+            <div class="Ftext">Supporter: Teacher</div>
+            <div class="Ftext">Copyright: Hacker</div>
+            <div class="Ftext">Startdate: 2024/10/28</div>
+            <div class="Ftext">Finishdate: 2024/11/</div>
+            <div class="titleF">Reference</div>
+            <div class="Ftext">Wiki-circle of fifth: <a href="https://en.wikipedia.org/wiki/Circle_of_fifths" style="position: absolute;"> https://en.wikipedia.org/wiki/Circle_of_fifths</a></div>
+            <div class="Ftext">Wiki-canon in D: <a href="https://en.wikipedia.org/wiki/Pachelbel%27s_Canon" style="position: absolute;"> https://en.wikipedia.org/wiki/Pachelbel%27s_Canon</a></div>
+            <div class="Ftext">WIki-never gonna give you up: <a href="https://en.wikipedia.org/wiki/Never_Gonna_Give_You_Up" style="position: absolute;">https://en.wikipedia.org/wiki/Never_Gonna_Give_You_Up</a></div>
+            <div class="Ftext">Chord of "Canon in C": <a href="https://tabs.ultimate-guitar.com/tab/johann-pachelbel/canon-in-c-chords-4805099" style="position: absolute;">https://tabs.ultimate-guitar.com/tab/johann-pachelbel/canon-in-c-chords-4805099</a></div>
+            <div class="Ftext">Chord of "Never gonna give you up": <a href="https://tabs.ultimate-guitar.com/tab/foo-fighters/never-gonna-give-you-up-chords-2266705" style="position: absolute;">https://tabs.ultimate-guitar.com/tab/foo-fighters/never-gonna-give-you-up-chords-2266705</a></div>
+            <div class="titleF">Pictures Reference</div>
+            <div class="Ftext"><a href="https://wfuogb.com/wp-content/uploads/2021/10/900x520_piano-min.jpeg">https://wfuogb.com/wp-content/uploads/2021/10/900x520_piano-min.jpeg</a></div>
+            <div class="Ftext"><a href="https://t4.ftcdn.net/jpg/09/68/06/85/360_F_968068599_2WAWIbJPTwTAl3mqjHS0vl6mmWSUr3OB.jpg">https://t4.ftcdn.net/jpg/09/68/06/85/360_F_968068599_2WAWIbJPTwTAl3mqjHS0vl6mmWSUr3OB.jpg</a></div>
+            <div class="Ftext"><a href="https://www.successunlimited-mantra.com/images/easyblog_articles/195/blog-106.jpg">https://www.successunlimited-mantra.com/images/easyblog_articles/195/blog-106.jpg</a></div>
+            <div class="Ftext"><a href="https://i.makeagif.com/media/6-15-2021/Z5Zeri.gif">https://i.makeagif.com/media/6-15-2021/Z5Zeri.gif</a></div>
+        </div>
+    </footer>
+</body>
+</html>

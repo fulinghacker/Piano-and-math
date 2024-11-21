@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music and math circle</title>
+    <style>
+        body,html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+    background-image: url(https://media.gettyimages.com/id/1409878886/ja/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%88/%E5%A4%A7%E5%AD%A6%E3%81%A7%E3%81%AE%E8%AC%9B%E7%BE%A9%E4%B8%AD%E3%81%AB%E3%83%8E%E3%83%BC%E3%83%88%E3%81%AB%E3%83%A1%E3%83%A2%E3%82%92%E6%9B%B8%E3%81%8F%E7%94%B7%E3%81%AE%E6%89%8B%E3%81%AE%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%BA%E3%82%A2%E3%83%83%E3%83%97%E5%86%99%E7%9C%9F.jpg?s=612x612&w=0&k=20&c=E5fbEpbEFOgR557-lxKNnrRdvCOgjlgmPEQ7IjfdVAw=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-x: 0px;
+    background-attachment: scroll;
+    background-color: #FAF3E3;
+}
+.nav{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: #2F4858;
+    overflow: hidden;
+    width: 100vw;
+}
+nav a{
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
+nav li:hover{
+    background-color: #3d5d71;
+}
+nav li{
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+}
+/*cirle of fifth*/
+.circle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-106.5%) scale(1.75);
+    z-index: -1;
+}
+.plat{
+    display: flex;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    position: relative;
+    height: 304px;
+    width: 304px;
+    border-radius: 50%;
+    animation-name: rotate;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rotate{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.outer{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+.inner{
+    background-color: #FAF3E3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+.inner2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    width: 160px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+.section{
+    position: absolute;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    height: 150px;
+    width: 150px;
+    border: 1px solid;
+    transform-origin: 0% 100%;
+    will-change: background-color;
+    z-index: -1;
+}
+.keys{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: skewY(60deg) translateX(90%) translateY(140%) rotate(15deg);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.minor{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: skewY(60deg) translate(2%,1220%) rotate(15deg);
+}
+/*circle of fifth ends*/
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(0px,290px);
+    height: 200px;
+    width: 100%;
+    font-size: 65px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #e2c000d4;
+}
+#welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 100%;
+    transform: translate(150%,-90%);
+}
+#courseT{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translate(-20%,25%);
+}
+#header{
+    height: 50vh;
+}
+
+
+
+.waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px;
+    min-height:100px;
+    max-height:150px;
+    transform: translate(0px,35px);
+    color: #FAF3E3;
+}
+  
+
+/* Animation */
+
+.parallax > use {
+animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+fill: #efefefd5;
+}
+.parallax > use:nth-child(1) {
+animation-delay: -2s;
+animation-duration: 7s;
+fill: rgb(244, 244, 244);
+}
+.parallax > use:nth-child(2) {
+animation-delay: -3s;
+animation-duration: 10s;
+fill: #f4f3efb1;
+}
+.parallax > use:nth-child(3) {
+animation-delay: -4s;
+animation-duration: 13s;
+fill: white;
+}
+.parallax > use:nth-child(4) {
+animation-delay: -5s;
+animation-duration: 20s;
+fill: #FAF3E3;
+}
+@keyframes move-forever {
+0% {
+    transform: translate3d(-90px,0,0);
+}
+100% { 
+    transform: translate3d(85px,0,0);
+}
+}
+@media (max-width: 768px) {
+.waves {
+    height:40px;
+    min-height:40px;
+}
+}
+/*waves*/
+main{
+    margin: 0px;
+    padding: 0px;
+    height:795vh;
+    width: 100vw;
+    max-width: 100vw;
+    background-color: #FAF3E3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.subtitle{
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #654321;
+}
+hr{
+    width: 50%;
+}
+.tablecontent{
+    position: relative;
+    margin-top: 30px;
+    padding: 10px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center
+}
+#TC{
+    font-size: 50px;
+    color: #ffd700;
+}
+.TClist{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    transform: translateX(-45px);
+}
+.TClist ul{
+    list-style-type: none;
+}
+.TClist a{
+    text-decoration: none;
+    color: black;
+}
+.TClist li{
+    padding: 12px;
+    font-size: 22px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 120%;
+}
+.TClist li:hover{
+    background-color: #ffcd39;
+    color: white;
+}
+.TClist li:hover::marker {
+    color: red; 
+}
+p{
+    padding: 10px;
+    margin: 0;
+}
+.art{
+    width: 75%;
+}
+
+/*Central angle*/
+#central{
+    margin: 20px;
+    height: 78em;
+    position: relative;
+}
+.textCen{
+    font-size: 22px;
+    text-indent: 25px;
+}
+#textCen2 p{
+    width: 40%;
+    transform: translate(130%,80px);
+}
+.textCen a{
+    color: #7f6000;
+    z-index: 1000;
+}
+.textI a{
+    color: #7f6000;
+}
+#central .img{
+    text-align: left;
+    transform: translateX(10%);
+}
+#canoncchord{
+    width: 350px;
+    height: auto;
+    transform: translate(0,40px);
+}
+#canoncchord:hover{
+    box-shadow: 2px 2px 10px #7f6000;
+}
+
+.circleCen{
+    position: relative;
+    left: 20%;
+    top: 0%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.platCen{
+    display: flex;
+    transform: translate(0,-200%) rotate(-15deg) scale(1.4);
+    overflow: hidden;
+    position: relative;
+    height: 306px;
+    width: 306px;
+    border-radius: 50%;
+    will-change: background-color;
+}
+.outerspace{
+    height: 302px;
+    width: 302px;
+    border: 2px solid;
+    border-radius: 50%;
+    z-index: 3;
+}
+.outerCen{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 306px;
+    width: 306px;
+    border: 0px solid;
+    border-radius: 50%;
+}
+.innerCen{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 50%;
+    z-index: 2;
+}
+.inner2Cen{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    width: 160px;
+    border: 2px solid;
+    border-radius: 50%;
+    z-index: 2;
+    animation: minorchenge_mino 10s linear infinite;
+}
+.innerspace{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    width: 160px;
+    border: 2px solid;
+    border-radius: 50%;
+    z-index: 2;
+}
+.sectionCen{
+    position: absolute;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    height: 150px;
+    width: 150px;
+    border: 1px solid;
+    transform-origin: 0% 100%;
+    will-change: background-color;
+    z-index: 1;
+}
+#sectionCenC{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#sectionCenG{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#sectionCenF{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.segmentCenL{
+    width: 1px;
+    height: 200px;
+    border: 2px solid;
+    background-color: black;
+}
+#centralimg{
+    height: 450px;
+    width: auto;
+    transform: translate(150%,-83%);
+}
+#central2img{
+    height: 450px;
+    width: auto;
+    transform: translate(125%,-90%);    
+}
+
+/*Inscribe angle*/
+#inscribe{
+    margin: 20px;
+    height:58em;
+}
+#inscribe p{
+    font-size: 22px;
+    text-indent: 25px;
+}
+#inscribeimg{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 500px;
+    width: auto;
+}
+
+
+.finish{
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+}
+.finish a{
+    text-decoration: none;
+}
+.up{
+    border: 2px solid;
+    position: absolute;
+    left: 50%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #7f6000;
+    border-color: rgba(255, 255, 255, 0);
+    transform: translateX(-50%);
+}
+.backB:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+.backB:hover .up{
+    transition: 0.4s;
+    background-color: white;
+}
+.back:hover{
+    transition: 0.4s;
+}
+.more:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+.back{
+    color: #7f6000;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.or{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.more{
+    color: #7f6000;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*practice*/
+#practice{
+    margin: 20px;
+    height: 140em;
+}
+.subtitle{
+    font-size: 40px;
+}
+#practice p{
+    font-size: 25px;
+}
+#imgquestion21:hover{
+    box-shadow: 0 0 0   ;
+}
+.questions{
+    padding: 80px;
+    font-size: 30px;
+    position: absolute;
+    transform: translate(580px,-500px);
+}
+
+/*Footer*/
+
+.footer{
+    width: 100vw;
+    height: 125vh;
+    background-color: #3d5d71;
+}
+.footer a{
+    color: white;
+}
+.titleF{
+    padding-top: 40px;
+    padding-left: 30px;
+    font-size: 35px;
+    color: white;
+}
+.Ftext{
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="index.html"><b>Home</b></a></li>
+                <li><a href="basic.html"><b>Basic course</b></a></li>
+                <li><a href="intermediate.html"><b>Intermediate course</b></a></li>
+                <li><a href="advanced.html"><b>Advanced course</b></a></li> 
+                <li><a href="practice.html"><b>Explore more</b></a></li>
+            </ul>
+        </nav>
+        </div>
+    <div class="circle">
+        <div class="plat">
+            <div class="outer">
+                <div class="inner2">
+                    <div class="inner"></div>
+                </div>
+            </div>
+            <div class="section" style="transform: skewY(-60deg);">
+                <div class="keys" id="C"><div class="letter">C</div></div>
+                <div class="minor"><div class="minorl"><small>Am</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(30deg) skewY(-60deg);">
+                <div class="keys" id="G"><div class="letter">G</div></div>
+                <div class="minor"><div class="minorl"><small>Em</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(60deg) skewY(-60deg);">
+                <div class="keys" id="D"><div class="letter">D</div></div>
+                <div class="minor"><div class="minorl"><small>Bm</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(90deg) skewY(-60deg);">
+                <div class="keys" id="A"><div class="letter">A</div></div>
+                <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>F<sup>#</sup>m</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(120deg) skewY(-60deg);">
+                <div class="keys" id="E"><div class="letter">E</div></div>
+                <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>C<sup>#</sup>m</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(150deg) skewY(-60deg);">
+                <div class="keys" id="B"><div class="letter">B</div></div>
+                <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>G<sup>#</sup>m</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(180deg) skewY(-60deg);">
+                <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">G<small><sup>b</sup></small></div></div>
+                <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>D<sup>#</sup>m</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(210deg) skewY(-60deg);">
+                <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">D<small><sup>b</sup></small></div></div>
+                <div class="minor"><div class="minorS" style="transform: translate(-3px,-5px)"><small>B<sup>b</sup>m</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(240deg) skewY(-60deg);">
+                <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">A<small><sup>b</sup></small></div></div>
+                <div class="minor"><div class="minorl"><small>Fm</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(270deg) skewY(-60deg);">
+                <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">E<small><sup>b</sup></small></div></div>
+                <div class="minor"><div class="minorl"><small>Cm</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(300deg) skewY(-60deg);">
+                <div class="keys"><div class="letter" style="transform: translate(-50%,47%);">B<small><sup>b</sup></small></div></div>
+                <div class="minor"><div class="minorl"><small>Gm</small></div></div>
+            </div>
+            <div class="section" style="transform: rotate(330deg) skewY(-60deg);">
+                <div class="keys"><div class="letter">F</div></div>
+                <div class="minor"><div class="minorl"><small>Dm</small></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="smalltitle"><small>Welcome to</small></div>
+    <div class="title"><div id="welcome"><small><small><small>Welcome to</small></small></small></div><div id="courseT">INTERMEDIATE COURSE</div></div>
+    <div class="spacer" id="header"></div>
+    <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+    </div>
+    </header>
+
+    <main>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <div class="tablecontent">
+            <div class="subtitle" id="TC"><b>Table of content</b></div>
+            <div class="TClist">
+                <ul>
+                    <a href="#central"><li>Central angle</li></a>
+                    <a href="#inscribe"><li>Inscribe angle</li></a>
+                    <a href="#practice"><li>Practice</li></a>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <br>
+
+
+
+
+
+        <div id="central">
+            <div class="subtitle"><big>Central angle</big></div>
+            <div class="textCen">
+                <p style="font-size: 25px;">The main chord progression of the song <big><a href="https://www.youtube.com/watch?v=rF2YQXzY5Kk">“Canon in C”</a></big> is C G Am Em F C F G. If we mark these chords in the circle of fifths, we will be surprised to find that the range of movement of the chords in this song is exactly one-fourth of the entire circle, and ∠ FOG is 90 degrees, which is vertical.</p>
+                <p style="font-size: 25px;">In mathematics, this angle is the <span style="color: #b22222;"><big><b>central angle</b></big></span>, which is defined as <b><span style="color: #7f6000;">an angle formed by two <a href="basic.html#basicD">radii</a> in a circle</span></b>. </p>
+            </div>
+            <br><br>
+            <div class="img"><a href="https://tabs.ultimate-guitar.com/tab/johann-pachelbel/canon-in-c-chords-4805099"><img src="picture/chord progression of canon c.png" alt="The chord progression of canon c. It's C G Am Em F C F G" id="canoncchord"></a></div>
+            <div><img src="picture/cen.png" alt="" id="centralimg"></div>
+            <div class="textCen" id="textCen2" style="transform: translateY(-400px); font-size: 25px;">
+                <div style="transform: translate(0,30px);">
+                    <p>If two central angles are in the same circle and the arcs corresponding to them are same, then the degree of the two central angles will be same.</p>
+                    <p>For example, refer to the left picture, ∠ EOA and ∠ AOD are central angle, and arc EA = arc AD. Because both of them are central angle and arc EA = arc AD</p>
+                    <p><big><b><span style="color: #7f6000;">Therefore, ∠ EOA = ∠ AOD.</span></b></big></p>
+                </div>
+                <div style="transform: translate(-500px,150px);"><img src="picture/cen2.png" alt="" id="central2img"></div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <hr class="art"><br><br>
+
+        <div id="inscribe">
+            <div class="subtitle"><big>Inscribe angle</big></div>
+            <div class="textI">
+                <div style="width: 40%; height: 70vh; position: relative; top: 100px; left: 40px;">
+                    <p style="font-size: 25px;">Let's continue using the two endpoints of the <big>"Canon in C"</big> chord progression range on the circle of fifths. Then just pick a random point, conect these these points, we can get a angle.</p>
+                    <p style="font-size: 25px;">This angle is called an <span style="color: #b22222;"><big><b>inscribe angle</b></big></span> in mathematics, and it is defined as <b><span style="color: #7f6000;">the angle in a circle formed by two <a href="basic.html#chordarc">chords</a> with their endpoints at a point.</span></b></p>
+                </div>
+                <br><br>
+                <img src="picture/inscribe.png" alt="" id="inscribeimg" style="transform: translate(0,-520px);">
+                <div style="width: 40%; height: auto; position: relative; left: 640px; top: 50px;">
+                    <p style="font-size: 25px;">If the endpoints of a central angles and an inscribe angle are at the same endpoints of an arc, then the degree of inscribe angle is half of central angle.</p>
+                    <p style="font-size: 25px;"> In mathematics, we call this situation <span style="color: #b22222;"><big><b>subtend</b></big></span>, to explain the example on the left, we can say: </p>
+                    <p style="font-size: 28px;">Because central angle of FOG is 90<small><small><small><sup><sup><sup>O</sup></sup></sup></small></small></small>,  the inscribe angles and central angle are subtented by arc FG, the inscribe angles are 45<small><small><small><sup><sup><sup>O</sup></sup></sup></small></small></small>.</p>
+                </div>
+                <img src="picture/inscribe2.png" alt="" id="inscribeimg" style="transform: translate(-120%,-80%);">
+            </div>
+            
+        </div><br><br><br><br><br><b><br><br><br></b><hr class="art"><br><br><br><br>
+  
+        <div id="practice">
+            <div style="background-color: #ffce39ca; width:103vw ; transform: translateX(-30px); padding: 20px; text-align: center;"><p><big><big><b><big>Practice</big></b></big></big></p></div><br><br>
+                <p style="text-indent: 20px;"><big><span style="color: #b22222;"><b>Congratulations!</b></span></big> You already learned the diffculter definantions of circle geometry, let's just consolidate them before you forget.</p>
+                <br><p><b><big>1. Try to label the following</big></b></p><br>
+                <div><img src="picture/question21.png" style="position: relative; left: 40px; top: 30px; width: 450px; height: auto;" id="imgquestion2" alt=""></div><br><br>
+                <div class="questions" >
+                    <p><b>①Five central angles</b></p><br>
+                    <p></p>
+                    <p><b>②Four inscribe angles</b></p><br>
+                    <p></p>
+                    <p><b>③Two pairs of subtented angles</b></p><br>
+                </div><br>
+                <br><p><b><big>2. Find the degree of the ∠ ABD</big></b></p><br>
+                <div style="display: flex; justify-content: center;"><p><b>Hint:</b> <i><span style="color: #3d5d71;">Solve problems with a holistic perspective</span>.</i></p></div>
+                <div><img src="picture/question22.png" style="position: relative; left: 400px; top: 30px; width: 450px; height: auto;" id="imgquestion2" alt=""></div><br><br>
+                <br><br><br>
+                <div style="background-color: #fad99e; width:103vw ; transform: translateX(-30px); padding: 20px; text-align: center;"><p><big><big><b><big>Answer</big></b></big></big></p></div>
+                <br><br>
+                <p><big><b>1. Omission</b></big></p>
+                <p><big><b>2.</b></big></p>
+                <img src="picture/Aquestion2.png" style="position: relative; left: 100px; top: 30px; width: 450px; height: auto;" alt="">
+                <div class="explain" style="text-indent: 20px; transform: translate(650px,-350px);">
+                    <div style="transform: translateX(-20px);"><p><b><big><span style="color: #7f6000;">Explain</span></big></b></p></div>
+                    <p style="width: 40%;">Even though ∠ AOD is a diameter, but we can still regard it as a central angle. Then,  ∠ ABD is an inscribe angle, ∠ AOD and ∠ ABD are subtented by arc AD, so the degree of ∠ ABD will be half of ∠ AOD.</p>
+                    <div style="display: flex; justify-content: center; width: 30%;"><p><big><span style="color: #7f6000;"><b>∠ AOD = 180°</b></span></big></p></div>
+                    <div style="display: flex; justify-content: center; width: 30%;"><p><big><span style="color: #7f6000;"><b>Therefore, ∠ ABD = 90°</b></span></big></p></div>
+                </div>
+            </div>
+        </div><br><br><hr class="art"><br><br>
+    
+            <div class="finish">
+                <a href="basic.html">
+                    <div class="backB" id="containerback">
+                    <div class="up">^</div><br>
+                        <div class="back"><b>Go back to the top</b></div>
+                    </div>
+                </a>
+                <br><div id="or"><b>OR</b></div><br>
+                <a href="advanced.html"><div class="more"><b>Learn more?→</b></div></a>
+            </div>
+    
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="titleF">About</div>
+            <div class="Ftext">Author: Hacker</div>
+            <div class="Ftext">Supporter: Teacher</div>
+            <div class="Ftext">Copyright: Hacker</div>
+            <div class="Ftext">Startdate: 2024/10/28</div>
+            <div class="Ftext">Finishdate: 2024/11/</div>
+            <div class="titleF">Reference</div>
+            <div class="Ftext">Wiki-circle of fifth: <a href="https://en.wikipedia.org/wiki/Circle_of_fifths" style="position: absolute;"> https://en.wikipedia.org/wiki/Circle_of_fifths</a></div>
+            <div class="Ftext">Wiki-canon in D: <a href="https://en.wikipedia.org/wiki/Pachelbel%27s_Canon" style="position: absolute;"> https://en.wikipedia.org/wiki/Pachelbel%27s_Canon</a></div>
+            <div class="Ftext">WIki-never gonna give you up: <a href="https://en.wikipedia.org/wiki/Never_Gonna_Give_You_Up" style="position: absolute;">https://en.wikipedia.org/wiki/Never_Gonna_Give_You_Up</a></div>
+            <div class="Ftext">Chord of "Canon in C": <a href="https://tabs.ultimate-guitar.com/tab/johann-pachelbel/canon-in-c-chords-4805099" style="position: absolute;">https://tabs.ultimate-guitar.com/tab/johann-pachelbel/canon-in-c-chords-4805099</a></div>
+            <div class="Ftext">Chord of "Never gonna give you up": <a href="https://tabs.ultimate-guitar.com/tab/foo-fighters/never-gonna-give-you-up-chords-2266705" style="position: absolute;">https://tabs.ultimate-guitar.com/tab/foo-fighters/never-gonna-give-you-up-chords-2266705</a></div>
+            <div class="titleF">Pictures Reference</div>
+            <div class="Ftext"><a href="https://wfuogb.com/wp-content/uploads/2021/10/900x520_piano-min.jpeg">https://wfuogb.com/wp-content/uploads/2021/10/900x520_piano-min.jpeg</a></div>
+            <div class="Ftext"><a href="https://t4.ftcdn.net/jpg/09/68/06/85/360_F_968068599_2WAWIbJPTwTAl3mqjHS0vl6mmWSUr3OB.jpg">https://t4.ftcdn.net/jpg/09/68/06/85/360_F_968068599_2WAWIbJPTwTAl3mqjHS0vl6mmWSUr3OB.jpg</a></div>
+            <div class="Ftext"><a href="https://www.successunlimited-mantra.com/images/easyblog_articles/195/blog-106.jpg">https://www.successunlimited-mantra.com/images/easyblog_articles/195/blog-106.jpg</a></div>
+            <div class="Ftext"><a href="https://i.makeagif.com/media/6-15-2021/Z5Zeri.gif">https://i.makeagif.com/media/6-15-2021/Z5Zeri.gif</a></div>
+        </div>
+    </footer>
+</body>
+</html>
